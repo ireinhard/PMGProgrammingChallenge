@@ -21,7 +21,7 @@ def makeCombinedCSV(filesToRead, chunkSize):
 
     # Iterate through all files in chunks, add new column, and then append to database
     for file in filesToRead:
-        for chunk in pd.read_csv(file, chunksize=chunkSize, iterator=True):
+        for chunk in pd.read_csv(file, chunksize=chunkSize):
             chunk['fileName'] = ntpath.basename(file)
             csvDatabase = pd.concat([csvDatabase, chunk], ignore_index=True)
     return csvDatabase
