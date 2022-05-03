@@ -16,7 +16,7 @@ Function that creates combined database from given csv files
 @chunkSize: size of chunks to read in data 
 '''
 def makeCombinedCSV(filesToRead, chunkSize):
-    # Creating database
+    # Creating databaseh
     csvDatabase = pd.DataFrame()
 
     # Iterate through all files in chunks, add new column, and then append to database
